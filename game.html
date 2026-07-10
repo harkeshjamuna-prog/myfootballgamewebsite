@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess the Player | Edit-Me FC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+  <nav class="topbar">
+    <span class="crest">EDIT-ME FC</span>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="game.html">Guess the Player</a></li>
+    </ul>
+  </nav>
+
+  <header class="scoreboard">
+    <div class="board-frame">
+      <div class="board-row teams">
+        <div class="team home">
+          <span class="team-label">GUESSES LEFT</span>
+          <span class="team-name" id="guesses-left">6</span>
+        </div>
+        <div class="score-block" style="font-size:1.2rem;">
+          <span>WON <span id="win-count">0</span></span>
+        </div>
+        <div class="team away">
+          <span class="team-label">STATUS</span>
+          <span class="team-name" id="game-result">—</span>
+        </div>
+      </div>
+      <div class="board-row meta">
+        <span id="game-status">Type a player name to guess</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="strip game-strip">
+
+      <ul class="clue-list" id="clue-list">
+        <!-- clues get added here as guesses are made -->
+      </ul>
+
+      <form id="guess-form" class="guess-form" autocomplete="off">
+        <input
+          type="text"
+          id="guess-input"
+          placeholder="e.g. Kylian Mbappé"
+          aria-label="Guess the player's name"
+        >
+        <button type="submit" class="shot-btn">Guess</button>
+      </form>
+
+      <ul class="guess-history" id="guess-history"></ul>
+
+      <button class="reset-btn" id="reset-btn">New Player</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Edit-Me FC. Replace with your club's name.</p>
+  </footer>
+
+<script src="game.js"></script>
+</body>
+</html>
