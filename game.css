@@ -1,0 +1,127 @@
+.game-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 560px;
+}
+
+.clue-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.clue-list li {
+  background: #fff;
+  border-left: 4px solid var(--amber);
+  border-radius: 4px;
+  padding: 0.7rem 1rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.clue-list li .clue-label {
+  color: var(--grass);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.guess-form {
+  width: 100%;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.guess-form input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  border: 2px solid var(--pitch);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.guess-form input:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 1px;
+}
+
+.guess-form .shot-btn {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.05em;
+  background: var(--pitch);
+  color: var(--chalk);
+  border: none;
+  padding: 0 1.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.guess-form .shot-btn:hover,
+.guess-form .shot-btn:focus-visible {
+  background: var(--grass);
+}
+
+.guess-form input:disabled,
+.guess-form .shot-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.guess-history {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.guess-history li {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  background: rgba(27,94,63,0.08);
+}
+
+.guess-history li.wrong {
+  background: rgba(180,50,50,0.08);
+  color: #7a2222;
+}
+
+.guess-history li.correct {
+  background: var(--grass);
+  color: #fff;
+}
+
+.reset-btn {
+  font-family: 'Barlow', sans-serif;
+  background: none;
+  border: 2px solid var(--pitch);
+  color: var(--pitch);
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-btn:hover,
+.reset-btn:focus-visible {
+  background: var(--pitch);
+  color: var(--chalk);
+}
+
+#game-status {
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: normal;
+  font-size: 0.95rem;
+}
